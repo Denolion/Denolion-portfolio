@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | DENOLION</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">DENOLION 🦁</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button id="toggleMode">🌙</button>
+</header>
+
+<section class="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mnjbylya" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="successMsg" style="display:none; color: gold; margin-top:15px;">Message sent successfully! ✅</p>
+</section>
+
+<script src="js/script.js"></script>
+<script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", () => {
+        setTimeout(() => {
+            document.getElementById("successMsg").style.display = "block";
+        }, 100);
+    });
+</script>
+
+</body>
+</html>
